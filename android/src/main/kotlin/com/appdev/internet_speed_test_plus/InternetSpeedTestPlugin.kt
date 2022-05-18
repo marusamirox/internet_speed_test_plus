@@ -1,4 +1,4 @@
-package com.tahamalas.internet_speed_test
+package com.appdev.internet_speed_test_plus
 
 import android.app.Activity
 import fr.bmartel.speedtest.SpeedTestReport
