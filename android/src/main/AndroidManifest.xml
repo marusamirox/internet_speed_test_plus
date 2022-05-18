@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.appdev.internet_speed_test_plus">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+</manifest>
