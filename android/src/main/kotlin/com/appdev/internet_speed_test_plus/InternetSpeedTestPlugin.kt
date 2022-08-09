@@ -148,24 +148,24 @@ class InternetSpeedPlugin : FlutterPlugin, MethodCallHandler {
         println("Testing Testing")
         speedTestSocket.addSpeedTestListener(object : ISpeedTestListener {
             override fun onCompletion(report: SpeedTestReport) {
-//                // called when download/upload is complete
+              // called when download/upload is complete
 //                println("[COMPLETED] rate in octet/s : " + report.transferRateOctet)
 //                println("[COMPLETED] rate in bit/s   : " + report.transferRateBit)
-//                testListener.onComplete(report.transferRateBit.toDouble())
+               testListener.onComplete(report.transferRateBit.toDouble())
             }
 
             override fun onError(speedTestError: SpeedTestError, errorMessage: String) {
                 // called when a download/upload error occur
-                println("OnError: ${speedTestError.name}, $errorMessage")
+               // println("OnError: ${speedTestError.name}, $errorMessage")
                 testListener.onError(errorMessage, speedTestError.name)
             }
 
             override fun onProgress(percent: Float, report: SpeedTestReport) {
-//                // called to notify download/upload progress
+                // called to notify download/upload progress
 //                println("[PROGRESS] progress : $percent%")
 //                println("[PROGRESS] rate in octet/s : " + report.transferRateOctet)
 //                println("[PROGRESS] rate in bit/s   : " + report.transferRateBit)
-//                testListener.onProgress(percent.toDouble(), report.transferRateBit.toDouble())
+                testListener.onProgress(percent.toDouble(), report.transferRateBit.toDouble())
             }
         })
 //        speedTestSocket.startFixedUpload("http://ipv4.ikoula.testdebit.info/", 10000000, 10000)
